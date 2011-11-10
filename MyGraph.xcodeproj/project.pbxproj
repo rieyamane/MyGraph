@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		780B162B14655D8400304050 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 780B162A14655D8400304050 /* background.png */; };
+		78B45CB3146519E400BA2273 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B45CB2146519E400BA2273 /* UIKit.framework */; };
+		78B45CB5146519E400BA2273 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B45CB4146519E400BA2273 /* Foundation.framework */; };
+		78B45CB7146519E400BA2273 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B45CB6146519E400BA2273 /* CoreGraphics.framework */; };
+		78B45CBD146519E400BA2273 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78B45CBB146519E400BA2273 /* InfoPlist.strings */; };
+		78B45CBF146519E400BA2273 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B45CBE146519E400BA2273 /* main.m */; };
+		78B45CC3146519E400BA2273 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B45CC2146519E400BA2273 /* AppDelegate.m */; };
+		78B45CC6146519E400BA2273 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B45CC5146519E400BA2273 /* ViewController.m */; };
+		78B45CC9146519E400BA2273 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B45CC7146519E400BA2273 /* ViewController.xib */; };
+		78B45CD1146523C500BA2273 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B45CD0146523C500BA2273 /* GraphView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		780B162A14655D8400304050 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		78B45CAE146519E400BA2273 /* MyGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78B45CB2146519E400BA2273 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		78B45CB4146519E400BA2273 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		78B45CB6146519E400BA2273 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		78B45CBA146519E400BA2273 /* MyGraph-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyGraph-Info.plist"; sourceTree = "<group>"; };
+		78B45CBC146519E400BA2273 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		78B45CBE146519E400BA2273 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		78B45CC0146519E400BA2273 /* MyGraph-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyGraph-Prefix.pch"; sourceTree = "<group>"; };
+		78B45CC1146519E400BA2273 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		78B45CC2146519E400BA2273 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		78B45CC4146519E400BA2273 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		78B45CC5146519E400BA2273 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		78B45CC8146519E400BA2273 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		78B45CCF146523C500BA2273 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		78B45CD0146523C500BA2273 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78B45CAB146519E400BA2273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B45CB3146519E400BA2273 /* UIKit.framework in Frameworks */,
+				78B45CB5146519E400BA2273 /* Foundation.framework in Frameworks */,
+				78B45CB7146519E400BA2273 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78B45CA3146519E400BA2273 = {
+			isa = PBXGroup;
+			children = (
+				78B45CB8146519E400BA2273 /* MyGraph */,
+				78B45CB1146519E400BA2273 /* Frameworks */,
+				78B45CAF146519E400BA2273 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		78B45CAF146519E400BA2273 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78B45CAE146519E400BA2273 /* MyGraph.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78B45CB1146519E400BA2273 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78B45CB2146519E400BA2273 /* UIKit.framework */,
+				78B45CB4146519E400BA2273 /* Foundation.framework */,
+				78B45CB6146519E400BA2273 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78B45CB8146519E400BA2273 /* MyGraph */ = {
+			isa = PBXGroup;
+			children = (
+				78B45CC1146519E400BA2273 /* AppDelegate.h */,
+				78B45CC2146519E400BA2273 /* AppDelegate.m */,
+				78B45CC4146519E400BA2273 /* ViewController.h */,
+				78B45CC5146519E400BA2273 /* ViewController.m */,
+				78B45CC7146519E400BA2273 /* ViewController.xib */,
+				78B45CB9146519E400BA2273 /* Supporting Files */,
+				78B45CCF146523C500BA2273 /* GraphView.h */,
+				78B45CD0146523C500BA2273 /* GraphView.m */,
+			);
+			path = MyGraph;
+			sourceTree = "<group>";
+		};
+		78B45CB9146519E400BA2273 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				780B162A14655D8400304050 /* background.png */,
+				78B45CBA146519E400BA2273 /* MyGraph-Info.plist */,
+				78B45CBB146519E400BA2273 /* InfoPlist.strings */,
+				78B45CBE146519E400BA2273 /* main.m */,
+				78B45CC0146519E400BA2273 /* MyGraph-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78B45CAD146519E400BA2273 /* MyGraph */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78B45CCC146519E400BA2273 /* Build configuration list for PBXNativeTarget "MyGraph" */;
+			buildPhases = (
+				78B45CAA146519E400BA2273 /* Sources */,
+				78B45CAB146519E400BA2273 /* Frameworks */,
+				78B45CAC146519E400BA2273 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyGraph;
+			productName = MyGraph;
+			productReference = 78B45CAE146519E400BA2273 /* MyGraph.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78B45CA5146519E400BA2273 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Martian77;
+			};
+			buildConfigurationList = 78B45CA8146519E400BA2273 /* Build configuration list for PBXProject "MyGraph" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 78B45CA3146519E400BA2273;
+			productRefGroup = 78B45CAF146519E400BA2273 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78B45CAD146519E400BA2273 /* MyGraph */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78B45CAC146519E400BA2273 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B45CBD146519E400BA2273 /* InfoPlist.strings in Resources */,
+				78B45CC9146519E400BA2273 /* ViewController.xib in Resources */,
+				780B162B14655D8400304050 /* background.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78B45CAA146519E400BA2273 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B45CBF146519E400BA2273 /* main.m in Sources */,
+				78B45CC3146519E400BA2273 /* AppDelegate.m in Sources */,
+				78B45CC6146519E400BA2273 /* ViewController.m in Sources */,
+				78B45CD1146523C500BA2273 /* GraphView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		78B45CBB146519E400BA2273 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78B45CBC146519E400BA2273 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		78B45CC7146519E400BA2273 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78B45CC8146519E400BA2273 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78B45CCA146519E400BA2273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		78B45CCB146519E400BA2273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78B45CCD146519E400BA2273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyGraph/MyGraph-Prefix.pch";
+				INFOPLIST_FILE = "MyGraph/MyGraph-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		78B45CCE146519E400BA2273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyGraph/MyGraph-Prefix.pch";
+				INFOPLIST_FILE = "MyGraph/MyGraph-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78B45CA8146519E400BA2273 /* Build configuration list for PBXProject "MyGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78B45CCA146519E400BA2273 /* Debug */,
+				78B45CCB146519E400BA2273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78B45CCC146519E400BA2273 /* Build configuration list for PBXNativeTarget "MyGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78B45CCD146519E400BA2273 /* Debug */,
+				78B45CCE146519E400BA2273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78B45CA5146519E400BA2273 /* Project object */;
+}
