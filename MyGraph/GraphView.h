@@ -8,13 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GraphView : UIView
-
 /********** The constants *********/
 #define kGraphHeight    300
 #define kDefaultGraphWidth  900
 #define kOffsetX    0
-#define kStepX  60
+#define kStepX  70
 #define kGraphBottom    300
 #define kGraphTop   0
 #define kStepY  50
@@ -22,6 +20,8 @@
 #define kBarTop 10
 #define kBarWidth    40
 #define kCircleRadius   3
+#define kNumberOfBars 12
 /**********************************/
+@interface GraphView : UIView
 
 @end

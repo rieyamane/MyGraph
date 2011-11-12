@@ -13,6 +13,7 @@
 /*** data by hard coded ***/
 //float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.77};
 float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.77, 0.99, 0.55};
+//float data[] = {135, 134, 142, 143, 139, 145, 139, 145, 139, 137, 136, 142, 152, 133};
 /**************************/
 
 - (id)initWithFrame:(CGRect)frame
@@ -24,41 +25,78 @@ float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.7
     return self;
 }
 
-// Draw line chart(本命)
+// Draw line chart
 - (void)drawLineGraphWithContext:(CGContextRef)ctx {
-    CGContextSetLineWidth(ctx, 1.5);
-    CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
+    CGContextSetLineWidth(ctx, 2.0);
+	CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
+    
     int maxGraphHeight = kGraphHeight - kOffsetY;
+    
+    // Gradient
+    
+    CGGradientRef gradient;
+    CGColorSpaceRef colorspace;
+    size_t num_locations = 2;
+    CGFloat locations[2] = {0.0,1.0};
+    CGFloat components[8] = {1.0,0.5,0.0,0.2,/* start color */1.0,0.5,0.0,1.0};/* end color */
+    colorspace = CGColorSpaceCreateDeviceRGB();
+    gradient = CGGradientCreateWithColorComponents(colorspace, components, locations, num_locations);
+    CGPoint startPoint, endPoint;
+    startPoint.x = kOffsetX;
+    startPoint.y = kGraphHeight;
+    endPoint.x = kOffsetX;
+    endPoint.y = kOffsetY;
+        
+    // Drawing the solid fill
+    
+    CGContextSetFillColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:0.5] CGColor]);
+    CGContextBeginPath(ctx);
+    CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight);
+    CGContextAddLineToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * data[0]);
+
+    for (int i = 1; i < sizeof(data); i++) 
+    {
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * data[i]);
+
+    }
+    CGContextAddLineToPoint(ctx, kOffsetX + (sizeof(data) - 1) * kStepX, kGraphHeight);
+    CGContextClosePath(ctx);
+    
+//    CGContextDrawPath(ctx, kCGPathFill);
+    CGContextSaveGState(ctx);
+	CGContextClip(ctx);
+    
+    CGContextDrawLinearGradient(ctx, gradient, startPoint, endPoint, 0);
+    
+    CGContextRestoreGState(ctx);
+    CGColorSpaceRelease(colorspace);
+    CGGradientRelease(gradient);
+    
+    // Drawing the graph itself
+    
     CGContextBeginPath(ctx);
     CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * data[0]);
-    for (int i = 1; i < sizeof(data); i++)
+    for (int i = 1; i < sizeof(data); i++) 
     {
-            CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * data[i]);
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * data[i]);
+//                CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, data[i]);
     }
+    
     CGContextDrawPath(ctx, kCGPathStroke);
     
-    //Ellipse
+    // Drawing circles
+    
     CGContextSetFillColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
-    for (int i = 1; i < sizeof(data) - 1; i++)
+    
+    for (int i = 1; i < sizeof(data) - 1; i++) 
     {
         float x = kOffsetX + i * kStepX;
         float y = kGraphHeight - maxGraphHeight * data[i];
+//        float y = data[i];        
         CGRect rect = CGRectMake(x - kCircleRadius, y - kCircleRadius, 2 * kCircleRadius, 2 * kCircleRadius);
         CGContextAddEllipseInRect(ctx, rect);
     }
     CGContextDrawPath(ctx, kCGPathFillStroke);
-}
-
-// Draw bar chart
-- (void)drawBar:(CGRect)rect context:(CGContextRef)ctx {
-    CGContextBeginPath(ctx);
-    CGContextSetGrayFillColor(ctx, 0.2, 0.7);
-    CGContextMoveToPoint(ctx, CGRectGetMinX(rect), CGRectGetMinY(rect));
-    CGContextAddLineToPoint(ctx, CGRectGetMaxX(rect), CGRectGetMinY(rect));
-    CGContextAddLineToPoint(ctx, CGRectGetMaxX(rect), CGRectGetMaxY(rect));
-    CGContextAddLineToPoint(ctx, CGRectGetMinX(rect), CGRectGetMaxY(rect));
-    CGContextClosePath(ctx);
-    CGContextFillPath(ctx);
 }
 
 // Only override drawRect: if you perform custom drawing.
@@ -67,10 +105,6 @@ float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.7
 {
     // Drawing code
     CGContextRef context = UIGraphicsGetCurrentContext();
-    // Draw the background image
-//    UIImage *image = [UIImage imageNamed:@"background.png"];
-//    CGRect imageRect = CGRectMake(0, 0, image.size.width, image.size.height);
-//    CGContextDrawImage(context, imageRect, image.CGImage);
     CGContextSetLineWidth(context, 0.6);
     CGContextSetStrokeColorWithColor(context, [[UIColor lightGrayColor] CGColor]);
     CGFloat dash[] = {2.0,2.0};
@@ -92,17 +126,8 @@ float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.7
     }
     CGContextStrokePath(context);
     CGContextSetLineDash(context, 0, NULL, 0); // Remove the dash
-    // Draw the bars
-//    float maxBarHeight = kGraphHeight - kBarTop - kOffsetY;
-    for (int i = 0; i < sizeof(data); i++) {
-//        float barX = kOffsetX + kStepX + i * kStepX - kBarWidth / 2;
-//        float barY = kBarTop + maxBarHeight - maxBarHeight * data[i];
-//        float barHeight = maxBarHeight * data[i];
-//        CGRect barRect = CGRectMake(barX, barY, kBarWidth, barHeight);
-//        [self drawBar:barRect context:context];
-        [self drawLineGraphWithContext:context];
-        
-    }
+    
+    [self drawLineGraphWithContext:context];
     
 }
 

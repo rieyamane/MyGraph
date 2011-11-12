@@ -9,26 +9,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "MyGraph/GraphView.m"
-         timestampString = "342621557.059717"
+         timestampString = "342793017.491099"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "90"
-         endingLineNumber = "90"
-         landmarkName = "-drawRect:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "MyGraph/GraphView.m"
-         timestampString = "342621557.059717"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "83"
-         endingLineNumber = "83"
-         landmarkName = "-drawRect:"
+         startingLineNumber = "55"
+         endingLineNumber = "55"
+         landmarkName = "-drawLineGraphWithContext:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
