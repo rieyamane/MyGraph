@@ -16,6 +16,8 @@ float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.7
 //float data[] = {135, 134, 142, 143, 139, 145, 139, 145, 139, 137, 136, 142, 152, 133};
 /**************************/
 
+CGRect touchAreas[kNumberOfBars];
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -97,6 +99,21 @@ float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.7
         CGContextAddEllipseInRect(ctx, rect);
     }
     CGContextDrawPath(ctx, kCGPathFillStroke);
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+	CGPoint point = [touch locationInView:self];
+    NSLog(@"Touch x:%f, y:%f", point.x, point.y);
+	
+	for (int i = 0; i < kNumberOfBars; i++) 
+    {
+		if (CGRectContainsPoint(touchAreas[i], point)) 
+        {
+            NSLog(@"Tapped a bar with index %d, value %f", i, data[i]);
+			break;
+		}
+	}
 }
 
 // Only override drawRect: if you perform custom drawing.
