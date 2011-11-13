@@ -10,6 +10,8 @@
 
 @implementation ViewController
 @synthesize scroller;
+@synthesize pointerView;
+@synthesize graphView;
 
 - (void)didReceiveMemoryWarning
 {
@@ -24,11 +26,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     scroller.contentSize = CGSizeMake(kDefaultGraphWidth, kGraphHeight);
+    NSLog(@"graph: %d", [[self.view subviews] indexOfObject:graphView]);
+    NSLog(@"pointer: %d", [[self.view subviews] indexOfObject:pointerView]);
+    
 }
 
 - (void)viewDidUnload
 {
     [self setScroller:nil];
+    [self setPointerView:nil];
+    [self setGraphView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

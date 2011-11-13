@@ -101,20 +101,20 @@ CGRect touchAreas[kNumberOfBars];
     CGContextDrawPath(ctx, kCGPathFillStroke);
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [touches anyObject];
-	CGPoint point = [touch locationInView:self];
-    NSLog(@"Touch x:%f, y:%f", point.x, point.y);
-	
-	for (int i = 0; i < kNumberOfBars; i++) 
-    {
-		if (CGRectContainsPoint(touchAreas[i], point)) 
-        {
-            NSLog(@"Tapped a bar with index %d, value %f", i, data[i]);
-			break;
-		}
-	}
-}
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+//    UITouch *touch = [touches anyObject];
+//	CGPoint point = [touch locationInView:self];
+//    NSLog(@"Touch x:%f, y:%f", point.x, point.y);
+//	
+//	for (int i = 0; i < kNumberOfBars; i++) 
+//    {
+//		if (CGRectContainsPoint(touchAreas[i], point)) 
+//        {
+//            NSLog(@"Tapped a bar with index %d, value %f", i, data[i]);
+//			break;
+//		}
+//	}
+//}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

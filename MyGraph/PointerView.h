@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface PointerView : UIView
-
+{
+    float pointerX;
+    BOOL drawPointer;
+}
 @end
