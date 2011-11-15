@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		780B162B14655D8400304050 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 780B162A14655D8400304050 /* background.png */; };
+		783E371D146F6E9B003E3DE1 /* PointerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783E371C146F6E9B003E3DE1 /* PointerView.m */; };
 		78B45CB3146519E400BA2273 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B45CB2146519E400BA2273 /* UIKit.framework */; };
 		78B45CB5146519E400BA2273 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B45CB4146519E400BA2273 /* Foundation.framework */; };
 		78B45CB7146519E400BA2273 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B45CB6146519E400BA2273 /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		780B162A14655D8400304050 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		783E371B146F6E9B003E3DE1 /* PointerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointerView.h; sourceTree = "<group>"; };
+		783E371C146F6E9B003E3DE1 /* PointerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointerView.m; sourceTree = "<group>"; };
 		78B45CAE146519E400BA2273 /* MyGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78B45CB2146519E400BA2273 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		78B45CB4146519E400BA2273 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +93,8 @@
 				78B45CB9146519E400BA2273 /* Supporting Files */,
 				78B45CCF146523C500BA2273 /* GraphView.h */,
 				78B45CD0146523C500BA2273 /* GraphView.m */,
+				783E371B146F6E9B003E3DE1 /* PointerView.h */,
+				783E371C146F6E9B003E3DE1 /* PointerView.m */,
 			);
 			path = MyGraph;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				78B45CC3146519E400BA2273 /* AppDelegate.m in Sources */,
 				78B45CC6146519E400BA2273 /* ViewController.m in Sources */,
 				78B45CD1146523C500BA2273 /* GraphView.m in Sources */,
+				783E371D146F6E9B003E3DE1 /* PointerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
